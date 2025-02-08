@@ -70,6 +70,15 @@ export default function ContactPage() {
           name="twitter:image"
           content="https://www.geeksoft.com/images/contact-banner.jpg"
         />
+         {/* Google Ads Tracking Code */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
+  <script dangerouslySetInnerHTML={{ __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16851817554');
+  ` }} />
       </Head>
 
       <section className="w-full py-16 bg-gray-100">

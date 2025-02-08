@@ -15,6 +15,15 @@ const page = () => {
         <meta property="og:image" content="https://www.shutterstock.com/image-photo/photocopy-copier-photocopier-machine-office-600nw-2472645575.jpg" />
         <meta property="og:url" content="http://www.gzb.ae/copier-printer-services" />
         <meta name="robots" content="index, follow" />
+         {/* Google Ads Tracking Code */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
+  <script dangerouslySetInnerHTML={{ __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16851817554');
+  ` }} />
       </Head>
 
       {/* New Section: Copier & Printer Sales */}

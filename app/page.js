@@ -17,6 +17,15 @@ export default function HomePage() {
         <meta name="twitter:description" content="Certified copiers, printers, and document management solutions to streamline your office." />
         <meta name="twitter:image" content="https://your-image-url-here.com/twitter-image.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+         {/* Google Ads Tracking Code */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
+  <script dangerouslySetInnerHTML={{ __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16851817554');
+  ` }} />
       </Head>
     <div>
       {/* Hero Section */}

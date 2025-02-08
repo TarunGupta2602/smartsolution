@@ -41,7 +41,17 @@ export default function AboutPage() {
               "availableLanguage": "English"
             }
           })}
+
         </script>
+         {/* Google Ads Tracking Code */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
+  <script dangerouslySetInnerHTML={{ __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16851817554');
+  ` }} />
       </Head>
 
       <div className="w-full">
