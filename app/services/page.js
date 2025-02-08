@@ -15,17 +15,21 @@ const page = () => {
         <meta property="og:image" content="https://www.shutterstock.com/image-photo/photocopy-copier-photocopier-machine-office-600nw-2472645575.jpg" />
         <meta property="og:url" content="http://www.gzb.ae/copier-printer-services" />
         <meta name="robots" content="index, follow" />
-         {/* Google Ads Tracking Code */}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
-  <script dangerouslySetInnerHTML={{ __html: `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-16851817554');
-  ` }} />
+          {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KGR47GLP');`
+        }} />
       </Head>
-
+              {/* Google Tag Manager (noscript) - Before Body Tag */}
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGR47GLP"
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+        </iframe>
+      </noscript>
       {/* New Section: Copier & Printer Sales */}
       <section className="w-full py-16 bg-gray-100">
         {/* Heading: Which service are you looking for? */}

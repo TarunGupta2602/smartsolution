@@ -17,16 +17,22 @@ export default function HomePage() {
         <meta name="twitter:description" content="Certified copiers, printers, and document management solutions to streamline your office." />
         <meta name="twitter:image" content="https://your-image-url-here.com/twitter-image.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-         {/* Google Ads Tracking Code */}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></script>
-  <script dangerouslySetInnerHTML={{ __html: `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-16851817554');
-  ` }} />
+             {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KGR47GLP');`
+        }} />
+        {/* End Google Tag Manager */}
       </Head>
+       {/* Google Tag Manager (noscript) - Before Body Tag */}
+       <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGR47GLP"
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+        </iframe>
+      </noscript>
     <div>
       {/* Hero Section */}
       <section className="w-full h-[55vh] bg-red-500 flex items-center">
