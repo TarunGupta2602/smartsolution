@@ -50,7 +50,8 @@ export default function Header() {
             }
           })}
 
-        
+        </script>
+           
       </Head>
       
       
