@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
+
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,47 +12,7 @@ export default function Header() {
 
   return (
     <>
-        <Head>
-        <title>About Us - GeekSoft Solutions Group</title>
-        <meta name="description" content="Learn about GeekSoft Solutions Group, a leader in document management and office technology solutions, with over 30 years of expertise." />
-        <meta name="keywords" content="GeekSoft Solutions Group, document management, office technology, workflow solutions, business efficiency" />
-        <meta name="author" content="GeekSoft Solutions Group" />
-        <link rel="canonical" href="https://yourwebsite.com/about" />
-
-        {/* Open Graph Meta Tags (for Facebook & LinkedIn) */}
-        <meta property="og:title" content="About Us - GeekSoft Solutions Group" />
-        <meta property="og:description" content="GeekSoft Solutions Group empowers businesses with advanced document management and office technology solutions." />
-        <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
-        <meta property="og:url" content="https://yourwebsite.com/about" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us - GeekSoft Solutions Group" />
-        <meta name="twitter:description" content="GeekSoft Solutions Group helps businesses improve efficiency through innovative document technology solutions." />
-        <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg" />
-
-        {/* Structured Data for SEO (JSON-LD) */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "GeekSoft Solutions Group",
-            "url": "https://yourwebsite.com",
-            "logo": "https://yourwebsite.com/logo.png",
-            "description": "GeekSoft Solutions Group specializes in document management and office technology solutions to optimize business workflows.",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-800-123-4567",
-              "contactType": "customer service",
-              "areaServed": "Global",
-              "availableLanguage": "English"
-            }
-          })}
-
-        </script>
-           
-      </Head>
+      
       
       
 
@@ -60,12 +20,19 @@ export default function Header() {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-blue-600">
-                GeekSoft
-              </Link>
-            </div>
+           {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <img  
+              src=" https://img.freepik.com/premium-vector/geek-logo-template-creative-geek-logo-design-concept_416562-178.jpg"
+              alt="GeekSoft Logo"
+              width={90}
+              height={50}
+              className="w-16  h-16    rounded-full object-cover shadow-md"
+            />
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              GeekSoft
+            </Link>
+          </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-6">

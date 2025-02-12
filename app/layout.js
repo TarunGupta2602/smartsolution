@@ -15,66 +15,94 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "GeekSoft - Leading Tech Solutions",
-  description: "GeekSoft provides cutting-edge tech solutions, web development, and digital marketing strategies to boost your business.",
-  keywords: "web development, mobile apps, digital marketing, software solutions, GeekSoft",
+  title: "GeekSoft - Leading Tech Solutions | Web & App Development",
+  description: "GeekSoft provides cutting-edge software solutions, web & app development, and digital marketing strategies to grow your business.",
+  keywords: "web development, mobile apps, digital marketing, SEO, software solutions, e-commerce, branding, cloud solutions, GeekSoft",
   author: "GeekSoft",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
-    title: "GeekSoft - Web & App Development",
-    description: "Transform your digital presence with GeekSoft's top-notch software solutions.",
-    url: "https://geeksoft.com",
+    title: "GeekSoft - Web & App Development Experts",
+    description: "Transform your digital presence with GeekSoft's cutting-edge web, app, and software development solutions.",
+    url: "https://geeksoft.org",
     type: "website",
-    image: "https://geeksoft.com/og-image.jpg",
+    image: "https://geeksoft.org/og-image.jpg",
+    siteName: "GeekSoft",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     site: "@geeksoft",
     title: "GeekSoft - Web & App Development",
-    description: "Leading software solutions provider for web and mobile applications.",
-    image: "https://geeksoft.com/twitter-image.jpg",
+    description: "Leading provider of innovative software solutions for businesses worldwide.",
+    image: "https://geeksoft.org/twitter-image.jpg",
   },
+  favicon: "/favicon.ico",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="GeekSoft" />
+        <meta name="author" content={metadata.author} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="description" content={metadata.description} />
+        <meta name="theme-color" content="#0a66c2" />
 
-        {/* Open Graph Meta Tags */}
+        {/* Open Graph Meta Tags for Social Media */}
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={metadata.openGraph.type} />
         <meta property="og:image" content={metadata.openGraph.image} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
 
-        {/* Twitter Meta Tags */}
+        {/* Twitter Meta Tags for Sharing */}
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
 
-        <link rel="canonical" href="https://geeksoft.com" />
+        {/* Structured Data (Schema.org) for Better SEO */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GeekSoft",
+            "url": "https://geeksoft.org",
+            "logo": "https://geeksoft.org/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-74560-96455",
+              "contactType": "customer service",
+              "areaServed": "Worldwide",
+              "availableLanguage": ["English", "Hindi"]
+            },
+            "sameAs": [
+              "https://www.facebook.com/geeksoft",
+              "https://twitter.com/geeksoft",
+              "https://www.linkedin.com/company/geeksoft",
+              "https://www.instagram.com/geeksoft"
+            ]
+          })
+        }} />
+
+        {/* Canonical Link to Avoid Duplicate Content */}
+        <link rel="canonical" href="https://geeksoft.org" />
+
+        {/* Favicon and Apple Touch Icons */}
+        <link rel="icon" href={metadata.favicon} sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Title */}
         <title>{metadata.title}</title>
 
-        {/* Google Ads Tracking */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851817554"></Script>
-        <Script id="google-ads-tracking" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16851817554');
-          `
-        }} />
-        {/* End Google Ads Tracking */}
+       
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />

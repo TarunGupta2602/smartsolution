@@ -135,21 +135,22 @@ export default function ContactPage() {
             </p>
             <div className="space-y-4">
   <p className="flex items-center text-lg text-gray-700">
-    📍 <a href="https://maps.google.com/?q=123+Tech+Street,+New+York,+NY+10001" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
-      123 Tech Street, New York, NY 10001
+    📍 <a href="https://maps.google.com/?q=Hapur,+India" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
+      Hapur, India
     </a>
   </p>
   <p className="flex items-center text-lg text-gray-700">
-    📧 <a href="mailto:info@geeksoft.org" className="ml-2 text-blue-600 hover:underline">
-      info@geeksoft.org
+    📧 <a href="mailto:tarun.gupta2606@gmail.com" className="ml-2 text-blue-600 hover:underline">
+      tarun.gupta2606@gmail.com
     </a>
   </p>
   <p className="flex items-center text-lg text-gray-700">
-    📞 <a href="tel:+17867538470" className="ml-2 text-blue-600 hover:underline">
-      +1-786-753-8470
+    📞 <a href="tel:+917456096455" className="ml-2 text-blue-600 hover:underline">
+      +91-74560-96455
     </a>
   </p>
 </div>
+
 
           </div>
         </div>

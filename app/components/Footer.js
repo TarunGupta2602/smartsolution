@@ -14,9 +14,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">About Us</h3>
             <p className="text-gray-400 text-sm">
-              At Geeksoft, we provide top-tier office solutions to enhance productivity, streamline workflows, 
-              and improve document management. Our expertise includes copier and printer sales, document scanning, 
-              and on-site maintenance to ensure seamless business operations.
+            At GeekSoft, we deliver cutting-edge office solutions designed to boost productivity, optimize workflows, and simplify document management. From high-quality printer sales to advanced document scanning and reliable on-site maintenance, we ensure your business runs smoothly and efficiently. Let us help you eliminate downtime, reduce costs, and enhance your workplace operations ith our expert solutions.
             </p>
           </div>
 
@@ -36,14 +34,15 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <p className="text-gray-400 text-sm">
               Email: 
-              <a href="mailto:info@geeksoft.org" className="text-blue-500 hover:underline ml-1">
-                info@geeksoft.org
-              </a>
+              <a href="mailto:tarun.gupta2606@gmail.com" className="text-blue-500 hover:underline ml-1">
+  tarun.gupta2606@gmail.com
+</a>
+
             </p>
             <p className="text-gray-400 text-sm">
               Phone:  
-              <a href="tel:+17867538470" className="text-blue-500 hover:underline ml-1">
-                +1-786-753-8470
+              <a href="tel:+74656096455" className="text-blue-500 hover:underline ml-1">
+                +91-745-609-6455
               </a>
             </p>
 
