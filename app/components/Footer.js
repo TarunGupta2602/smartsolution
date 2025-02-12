@@ -1,22 +1,26 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function Footer() {
+  const footerRef = useRef(null);
+  const isInView = useInView(footerRef, { once: true, margin: "0px 0px -100px 0px" });
+
   return (
-    <footer className="bg-gray-900 text-white py-10">
+    <footer ref={footerRef} className="bg-gray-900 text-white py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Footer Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* About Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
             <h3 className="text-xl font-semibold mb-4">About Us</h3>
@@ -32,12 +36,12 @@ export default function Footer() {
           {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              {["Home", "Services", "About Us", "Contact"].map((item, index) => (
+              {["Home", "Services", "About", "Contact"].map((item, index) => (
                 <motion.li
                   key={index}
                   whileHover={{ scale: 1.1 }}
@@ -54,7 +58,7 @@ export default function Footer() {
           {/* Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
           >
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
@@ -87,7 +91,7 @@ export default function Footer() {
         <motion.div
           className="border-t border-gray-700 mt-10 pt-6 text-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
         >
           <p className="text-gray-500 text-sm">

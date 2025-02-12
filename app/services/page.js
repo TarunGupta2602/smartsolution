@@ -33,42 +33,35 @@ const page = () => {
             title: "Website Development",
             image: "https://images.ctfassets.net/fo9twyrwpveg/1KTYUHtDJTlsFDEWbLAFhj/c383a7286ebc9cef72646241a8c6ed34/What_is_the_Next.js_image_component_and_why_should_I_use_it_.png?fm=webp&w=3840&q=100",
             description:
-              "At GEEKSOFT Solutions, we build fast, SEO-friendly websites using the latest Next.js technology...",
+              "Get a web development website built with Next.js and React.js for just $50 in 3 weeks! 🚀 It features a sleek, responsive design, smooth animations, a 'Why Choose Us' section, SEO optimization, and an easy contact form. Perfect for freelancers or agencies looking to boost their online presence! 💻🔥",
             buttonColor: "bg-green-600 hover:bg-green-700",
           },
           {
             title: "Mobile App Development",
             image: "https://miro.medium.com/v2/resize:fit:1400/0*OHa3qt2O1mrfeBjQ",
             description:
-              "At GEEKSOFT Solutions, we create high-performance, cross-platform mobile apps using the latest React Native & Expo technologies...",
+              "Get a mobile app development website built  for just $50 in 3 weeks! 🚀 Showcase your expertise in React Native with a sleek, responsive design, smooth animations, and SEO optimization. Ideal for agencies and freelancers to attract clients and grow their business! 📱🔥",
             buttonColor: "bg-blue-600 hover:bg-blue-700",
           },
           {
             title: "SEO Services",
             image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/new-frs-image-dmca-to-advanced-seo.jpg",
             description:
-              "At GEEKSOFT Solutions, we offer expert SEO services to boost your website’s ranking using the latest strategies...",
+              "GeekSoft Solutions offers expert SEO services to boost your website’s ranking and drive organic traffic. We specialize in keyword optimization, on-page & technical SEO, content marketing, local SEO, and high-quality link building. Our team ensures faster site performance, better visibility, and increased conversions with data-driven strategies. Stay ahead of the competition — optimize your website with us today! 🚀",
             buttonColor: "bg-orange-600 hover:bg-orange-700",
           },
           {
-            title: "Copier & Printer Sales",
+            title: "Copier & Printer Services",
             image: "https://www.shutterstock.com/image-photo/photocopy-copier-photocopier-machine-office-600nw-2472645575.jpg",
             description:
-              "Experience the best in document technology with GEEKSOFT Solutions Group's range of Konica Minolta BizHub copiers and printers...",
-            buttonColor: "bg-yellow-600 hover:bg-yellow-700",
-          },
-          {
-            title: "Copier & Printer Service Calls",
-            image: "https://media.istockphoto.com/id/1230215260/photo/man-copying-car-key-with-key-copy-machine.jpg?s=612x612&w=0&k=20&c=6cZW4bA4iyEDHK0FudKW8A4mRhRzz04kIghaRGMetnI=",
-            description:
-              "When Copier and Printer Service issues threaten your business's productivity, GEEKSOFT Solutions Group is here to help...",
-            buttonColor: "bg-red-600 hover:bg-red-700",
+              "GeekSoft Solutions provides top-tier copier and printer services to ensure seamless office operations. We offer high-quality printers, copiers, maintenance, and repair services for businesses of all sizes. Our solutions include cost-effective leasing, fast troubleshooting, and efficient document management** to enhance productivity. Upgrade your office with reliable printing solutions today! 🖨️",
+            buttonColor: "bg-yellow-400 hover:bg-yellow-500",
           },
           {
             title: "Document Scanning Services",
             image: "https://media.istockphoto.com/id/157618089/photo/using-copier.jpg?s=612x612&w=0&k=20&c=PbC2x9x7CIA5qWKA3pD2aE4w8Hx92mK_0EVyXKeeR5s=",
             description:
-              "Transform your office with GEEKSOFT Solutions Group's Document Scanning service...",
+              "GeekSoft Solutions offers fast and reliable document scanning services to help businesses go paperless. We provide high-quality digital conversions, OCR (Optical Character Recognition) for searchable documents, and secure cloud storage solutions. Streamline your workflow with our efficient, cost-effective, and eco-friendly scanning services today! 📄✨",
             buttonColor: "bg-green-600 hover:bg-green-700",
           },
         ].map((service, index) => (
