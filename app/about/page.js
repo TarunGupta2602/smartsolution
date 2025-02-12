@@ -64,7 +64,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
               <p className="mt-4 text-gray-600 text-lg">
                 At GeekSoft Solutions Group, our mission is to revolutionize office efficiency through innovative document technology and expert solutions.
-                With over 30 years of experience, we help businesses streamline workflows, reduce costs, and enhance productivity.
+                 We help businesses streamline workflows, reduce costs, and enhance productivity.
               </p>
             </div>
             <img

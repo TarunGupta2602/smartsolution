@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -46,48 +47,43 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Contact Us - GEEKSOFT Solutions</title>
-        <meta
-          name="description"
-          content="Get in touch with GEEKSOFT Solutions for any inquiries or support. We are here to help with your document technology needs."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Contact Us - GEEKSOFT Solutions" />
-        <meta
-          property="og:description"
-          content="Get in touch with GEEKSOFT Solutions for any inquiries or support. We are here to help with your document technology needs."
-        />
-        <meta
-          property="og:image"
-          content="https://www.geeksoft.com/images/contact-banner.jpg"
-        />
-        <meta property="og:url" content="https://www.geeksoft.com/contact" />
-        <meta name="twitter:title" content="Contact Us - GEEKSOFT Solutions" />
-        <meta
-          name="twitter:description"
-          content="Get in touch with GEEKSOFT Solutions for any inquiries or support. We are here to help with your document technology needs."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.geeksoft.com/images/contact-banner.jpg"
-        />
-          
       </Head>
-             
-      <section className="w-full py-16 bg-gray-100">
+      
+      <motion.section 
+        className="w-full py-16 bg-gray-100"
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 0.8 }}
+      >
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800">Get in Touch</h2>
-          <p className="text-lg text-gray-600 mt-2">
+          <motion.h2 
+            className="text-4xl font-bold text-gray-800"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Get in Touch
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-gray-600 mt-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
             Have questions? We’d love to hear from you!
-          </p>
+          </motion.p>
         </div>
 
         <div className="container mx-auto px-6 flex flex-col md:flex-row gap-12">
-          <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-6">
-              Send us a message
-            </h3>
+          <motion.div 
+            className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-2xl font-semibold text-gray-700 mb-6">Send us a message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input
+              <motion.input
                 type="text"
                 name="name"
                 value={formData.name}
@@ -95,8 +91,9 @@ export default function ContactPage() {
                 placeholder="Your Name"
                 required
                 className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                whileFocus={{ scale: 1.05 }}
               />
-              <input
+              <motion.input
                 type="email"
                 name="email"
                 value={formData.email}
@@ -104,8 +101,9 @@ export default function ContactPage() {
                 placeholder="Your Email"
                 required
                 className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                whileFocus={{ scale: 1.05 }}
               />
-              <textarea
+              <motion.textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -113,48 +111,42 @@ export default function ContactPage() {
                 required
                 rows="5"
                 className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-              <button
+                whileFocus={{ scale: 1.05 }}
+              ></motion.textarea>
+              <motion.button
                 type="submit"
                 disabled={loading}
                 className="w-full bg-blue-600 text-white py-3 font-semibold rounded-lg hover:bg-blue-700 transition-all"
+                whileHover={{ scale: 1.05 }}
               >
                 {loading ? "Sending..." : "Send Message"}
-              </button>
+              </motion.button>
             </form>
-            {success && <p className="text-center mt-4 text-green-600">{success}</p>}
-          </div>
+            {success && <motion.p className="text-center mt-4 text-green-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>{success}</motion.p>}
+          </motion.div>
 
-          <div className="w-full md:w-1/2">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-6">
-              Contact Information
-            </h3>
-            <p className="text-lg text-gray-600 mb-4">
-              Feel free to reach out to us via email or phone. We are here to help
-              you!
-            </p>
-            <div className="space-y-4">
-  <p className="flex items-center text-lg text-gray-700">
-    📍 <a href="https://maps.google.com/?q=Hapur,+India" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
-      Hapur, India
-    </a>
-  </p>
-  <p className="flex items-center text-lg text-gray-700">
-    📧 <a href="mailto:tarun.gupta2606@gmail.com" className="ml-2 text-blue-600 hover:underline">
-      tarun.gupta2606@gmail.com
-    </a>
-  </p>
-  <p className="flex items-center text-lg text-gray-700">
-    📞 <a href="tel:+917456096455" className="ml-2 text-blue-600 hover:underline">
-      +91-74560-96455
-    </a>
-  </p>
-</div>
-
-
-          </div>
+          <motion.div 
+            className="w-full md:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-2xl font-semibold text-gray-700 mb-6">Contact Information</h3>
+            <p className="text-lg text-gray-600 mb-4">Feel free to reach out to us via email or phone. We are here to help you!</p>
+            <motion.div className="space-y-4">
+              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+                📍 <a href="https://maps.google.com/?q=Hapur,+India" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">Hapur, India</a>
+              </motion.p>
+              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+                📧 <a href="mailto:tarun.gupta2606@gmail.com" className="ml-2 text-blue-600 hover:underline">tarun.gupta2606@gmail.com</a>
+              </motion.p>
+              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
+                📞 <a href="tel:+917456096455" className="ml-2 text-blue-600 hover:underline">+91-74560-96455</a>
+              </motion.p>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
