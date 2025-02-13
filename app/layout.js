@@ -15,26 +15,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "GeekSoft - Web & Mobile App Development | SEO & IT Solutions",
-  description: "GeekSoft offers top-tier web development, mobile app solutions, SEO services, IT support, printing, and documentation services to help businesses thrive online.",
-  keywords: "web development, mobile app development, SEO services, software solutions, IT support, digital marketing, e-commerce, branding, cloud solutions, printing services, documentation services, GeekSoft",
+  title: "GeekSoft India - Leading Software Development & IT Solutions Company",
+  description: "GeekSoft India is a premier software development company specializing in custom web & mobile apps, enterprise solutions, SEO, and IT services. Get expert solutions at competitive prices.",
+  keywords: "GeekSoft, GeekSoft India, software development company, web development, mobile app development, SEO services, IT solutions, software company in India, best software company, affordable web development",
   author: "GeekSoft",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
-    title: "GeekSoft - Web & Mobile App Development | SEO & IT Solutions",
-    description: "Get cutting-edge software solutions from GeekSoft, including web & mobile app development, SEO, and IT services.",
+    title: "GeekSoft India - Leading Software Development Company",
+    description: "Transform your business with GeekSoft's expert web development, mobile apps, and IT solutions. 100+ successful projects delivered across India.",
     url: "https://geeksoft.org",
     type: "website",
-    image: "https://geeksoft.org/og-image.jpg",
-    siteName: "GeekSoft",
-    locale: "en_US",
+    image: "https://geeksoft.org/og-image-large.jpg",
+    siteName: "GeekSoft India",
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     site: "@geeksoft",
-    title: "GeekSoft - Web & Mobile App Development Experts",
-    description: "Leading provider of web, app, and IT solutions to boost your online presence.",
+    title: "GeekSoft India - Top Software Development Company",
+    description: "Trusted by 100+ businesses for web development, mobile apps & IT solutions. Contact us for free consultation.",
     image: "https://geeksoft.org/twitter-image.jpg",
   },
   favicon: "/favicon.ico",
@@ -57,8 +57,8 @@ export default function RootLayout({ children }) {
         <meta name="bingbot" content="index, follow" />
         <meta name="rating" content="General" />
         <meta name="distribution" content="global" />
-        <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="India" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi, India" />
         <meta name="geo.position" content="28.6139;77.2090" />
         <meta name="ICBM" content="28.6139, 77.2090" />
 
@@ -83,16 +83,30 @@ export default function RootLayout({ children }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "GeekSoft",
+            "name": "GeekSoft India",
             "url": "https://geeksoft.org",
             "logo": "https://geeksoft.org/logo.png",
-            "description": "GeekSoft specializes in web development, mobile apps, SEO, IT solutions, printing, and documentation services.",
+            "description": "GeekSoft India is a leading software development company providing comprehensive IT solutions including web development, mobile apps, SEO, and enterprise solutions.",
+            "foundingDate": "2020",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Your Street Address",
+              "addressLocality": "Delhi",
+              "addressRegion": "Delhi",
+              "postalCode": "Your Postal Code",
+              "addressCountry": "IN"
+            },
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+91-74560-96455",
               "contactType": "customer service",
-              "areaServed": "Worldwide",
+              "areaServed": ["IN", "Worldwide"],
               "availableLanguage": ["English", "Hindi"]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "50"
             },
             "sameAs": [
               "https://www.facebook.com/geeksoft",
@@ -122,6 +136,39 @@ export default function RootLayout({ children }) {
                 "serviceType": "Printing, Document Preparation, and Editing Services"
               }
             ]
+          })
+        }} />
+
+        {/* Local Business Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "GeekSoft India",
+            "image": "https://geeksoft.org/logo.png",
+            "priceRange": "₹₹",
+            "@id": "https://geeksoft.org",
+            "url": "https://geeksoft.org",
+            "telephone": "+91-74560-96455",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Your Street Address",
+              "addressLocality": "Delhi",
+              "postalCode": "Your Postal Code",
+              "addressCountry": "IN"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
           })
         }} />
 

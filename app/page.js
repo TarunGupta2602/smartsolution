@@ -1,6 +1,8 @@
 "use client";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 
 export default function HomePage() {
@@ -27,39 +29,62 @@ export default function HomePage() {
 
 {/* Hero Section */}
 <section className="w-full min-h-[55vh] bg-gradient-to-r from-blue-900 to-blue-600 flex items-center py-10">
-  <div className="flex flex-col-reverse md:flex-row justify-between w-full px-6 md:px-12 lg:px-24 gap-6 md:gap-12">
-    
+  <motion.div 
+    className="flex flex-col-reverse md:flex-row justify-between w-full px-6 md:px-12 lg:px-24 gap-6 md:gap-12"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+  >
     {/* Left Side: Text and Button */}
     <motion.div 
       className="text-white flex flex-col justify-center w-full md:w-1/2 text-center md:text-left"
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ 
+        duration: 0.8, 
+        ease: [0.6, -0.05, 0.01, 0.99],
+        delay: 0.2 
+      }}
     >
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wide">
+      <motion.h2 
+        className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wide"
+        animate={{ 
+          scale: [1, 1.02, 1],
+          transition: { 
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "reverse" 
+          }
+        }}
+      >
         Smart Solutions to Empower Your Business
-      </h2>
+      </motion.h2>
       <p className="text-lg sm:text-xl lg:text-2xl font-medium mb-6 leading-relaxed max-w-lg mx-auto md:mx-0">
         From <strong>website & mobile app development</strong> to <strong>SEO, office printers, and document solutions</strong>,  
         GEEKSOFT <strong>helps businesses grow smarter & work more efficiently.</strong> Get tailored digital and office solutions at affordable prices.
       </p>
-      <a href="/services" className="mx-auto md:mx-0">
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-yellow-500 py-3 px-6 text-gray-900 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all ease-in-out"
-        >
-          Explore Services
-        </motion.button>
-      </a> 
+      <motion.button 
+        whileHover={{ 
+          scale: 1.05,
+          boxShadow: "0 0 15px rgba(255,255,255,0.5)" 
+        }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-yellow-500 py-3 px-6 text-gray-900 text-lg font-semibold rounded-lg transition-all ease-in-out"
+      >
+        Explore Services
+      </motion.button>
     </motion.div>
 
     {/* Right Side: Image */}
     <motion.div 
       className="w-full md:w-1/2 flex justify-center"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
+      animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+      transition={{ 
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.3
+      }}
     >
       <img
         src="https://geeksoftconsulting.com/wp-content/uploads/2023/08/cb1.png"
@@ -67,7 +92,7 @@ export default function HomePage() {
         className="w-full max-w-md h-[300px] sm:h-[400px] md:h-[450px] lg:h-full object-cover rounded-lg shadow-lg"
       />
     </motion.div>
-  </div>
+  </motion.div>
 </section>
 
 
@@ -99,7 +124,7 @@ export default function HomePage() {
             title: "SEO Services",
             image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/new-frs-image-dmca-to-advanced-seo.jpg",
             description:
-              "GeekSoft Solutions offers expert SEO services to boost your website’s ranking and drive organic traffic. We specialize in keyword optimization, on-page & technical SEO, content marketing, local SEO, and high-quality link building. Our team ensures faster site performance, better visibility, and increased conversions with data-driven strategies. Stay ahead of the competition — optimize your website with us today! 🚀",
+              "GeekSoft Solutions offers expert SEO services to boost your website's ranking and drive organic traffic. We specialize in keyword optimization, on-page & technical SEO, content marketing, local SEO, and high-quality link building. Our team ensures faster site performance, better visibility, and increased conversions with data-driven strategies. Stay ahead of the competition — optimize your website with us today! 🚀",
             buttonColor: "bg-orange-600 hover:bg-orange-700",
           },
           {
@@ -122,16 +147,26 @@ export default function HomePage() {
             className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-xl overflow-hidden w-full"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ 
+              duration: 0.6,
+              delay: index * 0.2,
+              ease: "easeOut"
+            }}
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
           >
             {/* Animated Image */}
             <motion.img
               src={service.image}
               alt={service.title}
               className="w-full md:w-1/2 h-96 object-cover"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ 
+                scale: 1.1,
+                transition: { duration: 0.5 }
+              }}
             />
             <div className="w-full md:w-1/2 p-8 text-center md:text-left">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
@@ -174,7 +209,7 @@ export default function HomePage() {
             {
               title: "Experience",
               description:
-                "We’ve refined our processes to offer the best in customer service and technology.",
+                "We've refined our processes to offer the best in customer service and technology.",
             },
             {
               title: "Reliability",
@@ -184,15 +219,25 @@ export default function HomePage() {
             {
               title: "Customer-Centric",
               description:
-                "We prioritize our customers’ needs and offer customized solutions for unique business requirements.",
+                "We prioritize our customers' needs and offer customized solutions for unique business requirements.",
             },
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 50, rotateX: 45 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.8,
+                delay: index * 0.15,
+                ease: "easeOut"
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                transition: { duration: 0.3 }
+              }}
             >
               <motion.img
                 src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_1280.png"
@@ -220,14 +265,22 @@ export default function HomePage() {
     {/* Left Side: Image */}
     <motion.div
       className="w-full md:w-1/2"
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
+      initial={{ opacity: 0, x: -50, rotateY: 30 }}
+      whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+      viewport={{ once: true }}
+      transition={{ 
+        duration: 1,
+        ease: "easeOut"
+      }}
     >
-      <img
+      <motion.img
+        whileHover={{ 
+          scale: 1.05,
+          transition: { duration: 0.5 }
+        }}
+        className="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
         src="https://imageio.forbes.com/specials-images/imageserve/66e99bc027c808411e5f615a/Business-team-working-on-computers-in-modern-office-space-/960x0.jpg?format=jpg&width=960"
         alt="Office Efficiency"
-        className="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
       />
     </motion.div>
 
@@ -235,14 +288,19 @@ export default function HomePage() {
     <motion.div
       className="w-full md:w-1/2 text-center md:text-left"
       initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ 
+        duration: 1,
+        delay: 0.3,
+        ease: "easeOut"
+      }}
     >
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         Transforming Your Office Efficiency with Expert Solutions
       </h2>
       <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-        At <span className="font-semibold text-blue-600">GeekSoft Solutions</span>, we are your trusted partner in digital transformation and office efficiency. Whether you're looking to establish a strong online presence, boost business growth with cutting-edge mobile apps, or streamline office operations with reliable equipment, we’ve got you covered.
+        At <span className="font-semibold text-blue-600">GeekSoft Solutions</span>, we are your trusted partner in digital transformation and office efficiency. Whether you're looking to establish a strong online presence, boost business growth with cutting-edge mobile apps, or streamline office operations with reliable equipment, we've got you covered.
         <br />
         <br />
         Our expert team specializes in <span className="font-semibold">next-generation website development, high-performance mobile applications, and SEO strategies</span> that drive real results. We also provide top-tier office solutions, including <span className="font-semibold">advanced document management systems, high-quality printers, and seamless digital integrations</span>, ensuring your business operates with maximum efficiency.
