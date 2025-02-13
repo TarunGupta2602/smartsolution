@@ -71,7 +71,7 @@ export default function HomePage() {
         whileTap={{ scale: 0.95 }}
         className="bg-yellow-500 py-3 px-6 text-gray-900 text-lg font-semibold rounded-lg transition-all ease-in-out"
       >
-        Explore Services
+        <a href="/services">Explore Services</a> 
       </motion.button>
     </motion.div>
 
