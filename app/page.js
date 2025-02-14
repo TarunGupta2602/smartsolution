@@ -131,7 +131,7 @@ export default function HomePage() {
             title: "Copier & Printer Services",
             image: "https://www.shutterstock.com/image-photo/photocopy-copier-photocopier-machine-office-600nw-2472645575.jpg",
             description:
-              "GeekSoft Solutions provides top-tier copier and printer services to ensure seamless office operations. We offer high-quality printers, copiers, maintenance, and repair services for businesses of all sizes. Our solutions include cost-effective leasing, fast troubleshooting, and efficient document management** to enhance productivity. Upgrade your office with reliable printing solutions today! 🖨️",
+              "GeekSoft Solutions provides top-tier copier and printer services to ensure seamless office operations. We offer high-quality printers, copiers, maintenance, and repair services for businesses of all sizes. Our solutions include cost-effective leasing, fast troubleshooting, and efficient document management to enhance productivity. Upgrade your office with reliable printing solutions today! 🖨️",
             buttonColor: "bg-yellow-400 hover:bg-yellow-500",
           },
           {

@@ -69,7 +69,7 @@ export default function AboutPage() {
               >
                 <h3 className="text-xl font-bold text-gray-800">{title}</h3>
                 <p className="mt-2 text-gray-600">
-                  {index === 0 && "With over 30 years in the industry, we bring unparalleled knowledge and expertise to our clients."}
+                  {index === 0 && "With some years in the industry, we bring unparalleled knowledge and expertise to our clients."}
                   {index === 1 && "We leverage cutting-edge technology to streamline document management and office efficiency."}
                   {index === 2 && "Our client-focused approach ensures tailored solutions that meet unique business needs."}
                   {index === 3 && "We provide 24/7 reliable support, ensuring your operations run smoothly without downtime."}
