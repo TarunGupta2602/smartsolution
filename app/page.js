@@ -110,14 +110,14 @@ export default function HomePage() {
             title: "Website Development",
             image: "https://images.ctfassets.net/fo9twyrwpveg/1KTYUHtDJTlsFDEWbLAFhj/c383a7286ebc9cef72646241a8c6ed34/What_is_the_Next.js_image_component_and_why_should_I_use_it_.png?fm=webp&w=3840&q=100",
             description:
-              "Get a web development website built with Next.js and React.js for just $50 in 3 weeks! 🚀 It features a sleek, responsive design, smooth animations, a 'Why Choose Us' section, SEO optimization, and an easy contact form. Perfect for freelancers or agencies looking to boost their online presence! 💻🔥",
+              "Get a web development website built with Next.js and React.js for just $50 in 3 weeks! 🚀  responsive design, smooth animations, 'Why Choose Us' , SEO optimization, and an easy contact form. Perfect for freelancers or agencies looking to boost their online presence! 💻🔥",
             buttonColor: "bg-green-600 hover:bg-green-700",
           },
           {
             title: "Mobile App Development",
             image: "https://miro.medium.com/v2/resize:fit:1400/0*OHa3qt2O1mrfeBjQ",
             description:
-              "Get a mobile app development website built  for just $50 in 3 weeks! 🚀 Showcase your expertise in React Native with a sleek, responsive design, smooth animations, and SEO optimization. Ideal for agencies and freelancers to attract clients and grow their business! 📱🔥",
+              "Get a mobile app development built  for just $50 in 3 weeks! 🚀 expertise in React Native , responsive design, smooth animations, and SEO optimization.  grow your business! 📱🔥",
             buttonColor: "bg-blue-600 hover:bg-blue-700",
           },
           {
