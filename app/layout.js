@@ -61,6 +61,11 @@ export default function RootLayout({ children }) {
         <meta name="geo.placename" content="Delhi, India" />
         <meta name="geo.position" content="28.6139;77.2090" />
         <meta name="ICBM" content="28.6139, 77.2090" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="subject" content="Software Development & IT Solutions" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="target" content="all" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={metadata.openGraph.title} />
