@@ -29,7 +29,7 @@ const ServicesPage = () => {
       pricing: [
         { 
           plan: "Basic", 
-          price: "$299", 
+          price: "$49", 
           duration: "2 weeks", 
           features: [
             "5 Pages",
@@ -42,7 +42,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Professional", 
-          price: "$499", 
+          price: "$99", 
           duration: "3 weeks", 
           features: [
             "10 Pages",
@@ -55,7 +55,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Enterprise", 
-          price: "$999", 
+          price: "$199", 
           duration: "4 weeks", 
           features: [
             "Unlimited Pages",
@@ -90,7 +90,7 @@ const ServicesPage = () => {
       pricing: [
         { 
           plan: "Basic", 
-          price: "$599", 
+          price: "$49", 
           duration: "4 weeks", 
           features: [
             "Single Platform (iOS/Android)",
@@ -103,7 +103,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Professional", 
-          price: "$999", 
+          price: "$99", 
           duration: "6 weeks", 
           features: [
             "Both Platforms (iOS & Android)",
@@ -116,7 +116,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Enterprise", 
-          price: "$1,499", 
+          price: "$199", 
           duration: "8 weeks", 
           features: [
             "Both Platforms + Web App",
@@ -151,7 +151,7 @@ const ServicesPage = () => {
       pricing: [
         { 
           plan: "Basic", 
-          price: "$199", 
+          price: "$49", 
           duration: "Monthly", 
           features: [
             "5 Keywords",
@@ -164,7 +164,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Professional", 
-          price: "$399", 
+          price: "$99", 
           duration: "Monthly", 
           features: [
             "15 Keywords",
@@ -177,7 +177,7 @@ const ServicesPage = () => {
         },
         { 
           plan: "Enterprise", 
-          price: "$699", 
+          price: "$199", 
           duration: "Monthly", 
           features: [
             "30+ Keywords",
