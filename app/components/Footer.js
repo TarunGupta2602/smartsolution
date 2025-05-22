@@ -65,24 +65,30 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               Email:{" "}
               <motion.a
-                href="mailto:tarun.gupta2606@gmail.com"
+                href="mailto:faisalcool90@gmail.com"
                 className="text-blue-500 hover:underline ml-1"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                tarun.gupta2606@gmail.com
+                faisalcool90@gmail.com
               </motion.a>
             </p>
             <p className="text-gray-400 text-sm">
               Phone:{" "}
               <motion.a
-                href="tel:+74656096455"
+                href="tel:+919718845433"
                 className="text-blue-500 hover:underline ml-1"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                +91-745-609-6455
+                +91-97188-45433
               </motion.a>
+            </p>
+            <p className="text-gray-400 text-sm">
+              Address:{" "}
+              <span className="ml-1">
+                G-803 Ajnara GenX, Crossings Republik, Ghaziabad, Uttar Pradesh 201016
+              </span>
             </p>
           </motion.div>
         </motion.div>

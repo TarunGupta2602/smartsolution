@@ -45,9 +45,9 @@ export default function ContactPage() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Contact Us - GEEKSOFT Solutions</title>
-      </Head>
+      </Head> */}
       
       <motion.section 
         className="w-full py-16 bg-gray-100"
@@ -135,13 +135,13 @@ export default function ContactPage() {
             <p className="text-lg text-gray-600 mb-4">Feel free to reach out to us via email or phone. We are here to help you!</p>
             <motion.div className="space-y-4">
               <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                📍 <a href="https://maps.google.com/?q=Hapur,+India" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">Hapur, India</a>
+                📍 <a href="https://maps.google.com/?q=G-803+Ajnara+GenX,+Crossings+Republik,+Ghaziabad,+Uttar+Pradesh+201016" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">G-803 Ajnara GenX, Crossings Republik, Ghaziabad, Uttar Pradesh 201016</a>
               </motion.p>
-              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-                📧 <a href="mailto:tarun.gupta2606@gmail.com" className="ml-2 text-blue-600 hover:underline">tarun.gupta2606@gmail.com</a>
+              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+                📧 <a href="mailto:faisalcool90@gmail.com" className="ml-2 text-blue-600 hover:underline">faisalcool90@gmail.com</a>
               </motion.p>
-              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
-                📞 <a href="tel:+917456096455" className="ml-2 text-blue-600 hover:underline">+91-74560-96455</a>
+              <motion.p className="flex items-center text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.75 }}>
+                📞 <a href="tel:+919718845433" className="ml-2 text-blue-600 hover:underline">+91-97188-45433</a>
               </motion.p>
             </motion.div>
           </motion.div>

@@ -19,7 +19,6 @@ export const metadata = {
   description: "GeekSoft India is a premier software development company specializing in custom web & mobile apps, enterprise solutions, SEO, and IT services. Get expert solutions at competitive prices.",
   keywords: "GeekSoft, GeekSoft India, software development company, web development, mobile app development, SEO services, IT solutions, software company in India, best software company, affordable web development",
   author: "GeekSoft",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     title: "GeekSoft India - Leading Software Development Company",
